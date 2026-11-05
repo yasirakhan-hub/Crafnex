@@ -9,18 +9,37 @@
 
 ## 1. Public Website Capabilities
 
-### 1.1 Brand & Visual Presentation
-- **Original Gaming Identity:** High-contrast tech aesthetic featuring deep graphite background tones (`#12161C`), elevated surfaces (`#1B222B`), and crisp acid-lime (`#B8F45A`) and ice-cyan (`#4CC9D6`) accents. Previous rainbow experimental styling has been retired.
+### 1.1 Brand Identity & Original C + N Logo System
+- **Original C + N Monogram:** Geometric fusion of "C" and "N" forming an angular, futuristic emblem with forward-pointing chevron geometry.
+- **Dual Logo Assets:**
+  - **Standalone Icon:** Square/circular mark used for favicon, mobile navbar, PWA icon, and loading screen hero.
+  - **Full Logo Lockup:** C + N mark paired with horizontal uppercase **`CRAF NEX`** wordmark and *"Game Server Hosting"* descriptor.
+- **Original Aesthetic:** High-contrast tech aesthetic featuring deep graphite background tones (`#12161C`), elevated surfaces (`#1B222B`), and crisp acid-lime (`#B8F45A`) and ice-cyan (`#4CC9D6`) accents. Completely independent of competitor visual identities.
 - **Robust Dual-Theme Engine (Dark & Light Mode):**
   - Dark Mode (primary gamer aesthetic `#12161C`) operates seamlessly across all 27 pages.
   - Light Mode (clean warm-neutral aesthetic `#F5F7F9`) operates seamlessly across all 27 pages.
   - Instant theme switching without screen flicker or desynchronization.
-  - Reliable persistence via browser `localStorage` ensuring return visits maintain user preference.
-  - Complete component compliance: headers, footers, modal dialogs, inputs, tabs, and technical cards map cleanly to active theme tokens.
+  - Reliable persistence via browser `localStorage`.
 - **Responsive Layout:** Mobile-first architecture tested for Android handheld browsers, tablets, and desktop monitors across all 27 routes.
 
-### 1.2 Interactive Utilities (Demonstration Boundaries)
-- **Currency Switcher:** Interactive toggle between Indian Rupee (**₹ INR**) and US Dollar (**$ USD**). All price points are displayed as undecided placeholders (`[Price TBA]`) to be decided by the owner; no live banking or exchange rate APIs are contacted.
+### 1.2 Cinematic Media Experiences & Loading Architecture
+- **Cinematic Loading Screen (Site Reveal Sequence):**
+  - **Full-Screen Video Background:** Plays an atmospheric, full-screen **Minecraft cinematic VIDEO** (not a static image).
+  - **Separate Media Asset:** Strictly independent video asset from the homepage hero video.
+  - **Centered Brand Mark:** Features the glowing C + N combined logo at center.
+  - **Cinematic Choreography:** Inspired by high-end gaming reveal experiences and *Once Human*'s cinematic atmosphere.
+    - *Sequence:* Initiates from the **upper-right** → moves smoothly **toward the left** → sweeps **across the top** of the screen → smoothly reveals the rendered homepage.
+  - **No Numerical Counter / Progress Bar:** Operates without synthetic percentage displays ("0% - 100%") or progress bars.
+  - **Readiness Synchronization:** Synchronized to actual DOM and asset readiness with an intentional minimum duration (1.2s - 1.6s) to guarantee smooth visual payoff.
+  - **Muted & Resilient Playback:** Muted autoplay (`muted`, `playsinline`) with graceful static image fallback only if video decoding fails or battery-saver restricts playback.
+- **Homepage Hero Cinematic Video Background:**
+  - Plays a separate, looping Minecraft cinematic video background directly within the Hero section.
+  - Contrast-calibrated dark gradient vignette (`#12161C` at 65%–85% opacity) ensuring the headline, tagline (*"BUILD YOUR WORLD. HOST YOUR GAME."*), and CTA buttons remain effortlessly legible (AAA contrast).
+  - Fully optimized for Android mobile devices and desktop browsers with muted autoplay.
+  - Static fallback poster provided for low-power modes.
+
+### 1.3 Interactive Utilities (Demonstration Boundaries)
+- **Currency Switcher:** Interactive toggle between Indian Rupee (**₹ INR**) and US Dollar (**$ USD**). All price points are displayed as undecided placeholders (`[Price TBA]`); no live banking APIs are queried.
 - **Billing Cycle Toggle:** Interactive selector supporting Monthly, Quarterly (10% demo discount), and Annual (20% demo discount) billing terms with instant local rate calculations.
 - **Interactive RAM Calculator:** Visual slider allowing visitors to estimate server memory and CPU requirements based on projected player count and modding intensity, dynamically highlighting the matching plan from the five launch tiers.
 - **Simulated Ping Diagnostics:** Diagnostic tool displaying synthetic latency estimates to planned regional node locations (Mumbai, Delhi, Singapore, Frankfurt). Explicitly marked with a **"Simulated Diagnostic"** badge.
@@ -61,7 +80,7 @@ The hosting structure features a dedicated **Free Tier** (community sandbox) and
 ### 2.3 Owner Launch Preference Mismatch (Formal Audit Flag)
 - **Current Baseline:** The active code in `src/data/plans.ts` configures the entry paid plan (**Struggler**) at **4 GB DDR5 RAM**.
 - **Owner Launch Preference:** The owner's latest business vision indicates an entry-level **1 GB starting plan**.
-- **Audit Decision:** In adherence to Phase 1 strict preservation rules, no data files have been altered. The 4 GB baseline in `src/data/plans.ts` is maintained as the frontend reference, while the 1 GB configuration is formally flagged for owner review before Phase 1.5.
+- **Audit Decision:** Preserved the 4 GB baseline in `src/data/plans.ts` without code modification, while recording this formal mismatch flag for owner review before Phase 1.5.
 
 ---
 

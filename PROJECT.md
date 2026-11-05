@@ -9,6 +9,13 @@
 ## 1. Executive Summary & Brand Identity
 **Crafnex** (stylized as **CRAF NEX**) is an India-first game server hosting brand conceptualized for gaming communities, server creators, and multiplayer groups. The project's vision is built on delivering high-performance, low-latency game hosting within South Asia, featuring planned domestic infrastructure nodes in Mumbai and Delhi, followed by planned international edge locations in Singapore and Frankfurt.
 
+### Brand Mark & Visual Presentation
+- **Creative C + N Monogram:** An original, futuristic geometric mark combining "C" and "N" into an angular emblem with forward-pointing apex geometry. Available as a standalone icon (favicon, loading screen hero, mobile navbar) and full lockup with the uppercase **`CRAF NEX`** wordmark.
+- **Cinematic Media Experiences:**
+  - **Cinematic Loading Screen:** Full-screen Minecraft cinematic video background with centered C + N logo, upper-right → left → top → reveal sequence, zero progress bar/percentage counter, and synchronized unmount.
+  - **Homepage Hero Video:** Separate, looping Minecraft cinematic video background beneath a contrast-calibrated dark vignette ensuring AAA text legibility.
+- **Visual Identity:** High-contrast graphite palette (`#12161C`) with Acid Lime (`#B8F45A`) and Ice Cyan (`#4CC9D6`) accents, completely free of rainbow elements or competitor imitation.
+
 ### Current Implementation Phase
 - **Current Project Phase:** Phase 1 (Foundation & Planning Audit).
 - **Existing Repository Baseline:** Public-facing marketing website frontend built with React 19, TypeScript, and Tailwind CSS.

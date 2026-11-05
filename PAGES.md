@@ -58,7 +58,7 @@ Every route corresponds to an existing, fully functional React view component re
 
 | # | Route ID | URL Path / Hash | View Component | Category | Scope & Functional Boundaries |
 | :-: | :--- | :--- | :--- | :--- | :--- |
-| **1** | `home` | `/` (`#home`) | `HomeView.tsx` | Core | Brand overview, India-first architecture, separate Free Plan community spotlight, interactive RAM calculator, planned nodes, hardware transparency. No duplicate paid plan cards. |
+| **1** | `home` | `/` (`#home`) | `HomeView.tsx` | Core | Brand overview, dedicated Minecraft cinematic looping video background, India-first architecture, separate Free Plan community spotlight, interactive RAM calculator, planned nodes. No duplicate paid plan cards. |
 | **2** | `plans` | `/plans` (`#plans`) | `PlansLandingView.tsx` | Core | Dedicated Plans landing page featuring the approved description and dedicated `"All Plans"` navigation button. |
 | **3** | `all-plans` | `/all-plans` (`#all-plans`) | `AllPlansView.tsx` | Core | Dedicated master showcase of the four paid launch tiers (Struggler, Survivor, Warrior, Champion), comparison matrix, and demo checkout. |
 | **4** | `games` | `/games` (`#games`) | `GamesView.tsx` | Core | Active Minecraft Java/Bedrock launch cards and planned game expansions (Palworld, Rust, etc.) with demo "Notify Me" modals. |

@@ -18,7 +18,7 @@
                                        ▼
 ┌───────────────────────────────────────────────────────────────────────────────┐
 │ PHASE 1.5: Public Website Frontend Implementation (Next Phase)                │
-│ (Pending Owner Approval: Apply new brand tokens, maintain 27 responsive pages)│
+│ (Pending Owner Approval: C+N logo, cinematic loading, hero video, palettes)   │
 └──────────────────────────────────────┬────────────────────────────────────────┘
                                        │
                                        ▼
@@ -46,8 +46,12 @@
 
 ### Phase 1: Foundation & Documentation Audit *(Completed)*
 - [x] **Brand Identity Definition:** Established official brand name (**Crafnex / CRAF NEX**), tagline (**BUILD YOUR WORLD. HOST YOUR GAME.**), and brand descriptor (**Game Server Hosting**).
+- [x] **Logo Concept & Brand System:** Formulated original C + N combined monogram concept with standalone icon and full CRAF NEX wordmark lockup suitable for website, favicon, loading screen, and dashboard.
+- [x] **Cinematic Media Specifications:**
+  - Defined full-screen **Cinematic Loading Screen** with its own dedicated Minecraft cinematic video background, C + N logo display, upper-right → left → top → reveal sequence, no percentage counter/progress bar, and synchronized readiness.
+  - Defined separate **Homepage Hero Video Background** with its own dedicated Minecraft cinematic video, muted autoplay loop, contrast vignette, and mobile/desktop optimization.
 - [x] **Color Tokens & Design Guidelines:** Replaced experimental rainbow branding with an intentional, high-contrast gaming palette (Graphite `#12161C`, Elevated `#1B222B`, Card `#222B35`, Acid Lime `#B8F45A`, Ice Cyan `#4CC9D6`, Warm Amber `#F2A65A`, Warm-Neutral light canvas `#F5F7F9`).
-- [x] **Page Count & Route Inventory Audit:** Resolved page count inconsistencies by cataloging the full, verified **27-page route inventory** implemented in `src/App.tsx`.
+- [x] **Page Count & Route Inventory Audit:** Cataloged the full, verified **27-page route inventory** implemented in `src/App.tsx`.
 - [x] **Plans Navigation Journey:** Documented the dedicated 2-page flow:
   1. Navbar **"All Plans"** navigates to the **Plans Landing Page** (`plans`).
   2. Plans Landing Page features heading `Plans`, exact description, and **"All Plans"** button directly below.
@@ -64,13 +68,16 @@
 ### Phase 1.5: Public Website Frontend Implementation *(Next Step — Awaiting Approval)*
 *Phase 1.5 will focus on aligning the existing frontend codebase with the approved Phase 1 documentation upon explicit owner approval.*
 - **Planned Implementation Deliverables:**
-  - Update visual tokens in CSS and UI components to the approved Crafnex Graphite, Acid Lime, and Ice Cyan palette.
-  - Implement any owner-approved plan specification adjustments (e.g., resolving the 1 GB starting plan decision).
-  - Maintain all 27 responsive pages across mobile and desktop.
-  - Maintain functional Dark Mode and Light Mode with persistent local storage.
-  - Maintain interactive utilities: RAM calculator, simulated ping diagnostics, mock checkout modal, and currency toggle (INR ₹ / USD $).
-  - Maintain the 2-page Plans flow (`plans` -> `all-plans`) and clean Home page presentation.
-  - Keep all backend, payment, and server provisioning integrations deferred.
+  - **C + N Combined Logo Integration:** Deploy the original C + N monogram (standalone icon for favicon, loading screen, mobile header; full lockup for desktop header and footer).
+  - **Cinematic Loading Screen Implementation:** Build the full-screen site reveal overlay featuring its dedicated Minecraft cinematic video background, C + N logo, upper-right → left → top → reveal animation, zero progress bar/counter, and synchronized unmount.
+  - **Homepage Hero Video Background:** Integrate the dedicated, separate Minecraft cinematic looping background video with dark readability overlay.
+  - **Brand Tokens & Palette Alignment:** Update visual tokens in CSS and UI components to the approved Crafnex Graphite (`#12161C`), Acid Lime (`#B8F45A`), and Ice Cyan (`#4CC9D6`) palette.
+  - **Plan Configuration Alignment:** Implement any owner-approved plan specification adjustments (e.g., resolving the 1 GB starting plan decision).
+  - **Maintain 27 Responsive Pages:** Keep all 27 pages fully functional across mobile and desktop.
+  - **Maintain Dual-Theme Support:** Preserve Dark Mode and Light Mode with persistent local storage.
+  - **Maintain Interactive Utilities:** Preserve RAM calculator, simulated ping diagnostics, mock checkout modal, and currency toggle (INR ₹ / USD $).
+  - **Maintain Plans Navigation Flow:** Preserve the 2-page Plans flow (`plans` -> `all-plans`) and clean Home page presentation.
+  - **Strict Boundaries:** Keep all backend, payment, and server provisioning integrations deferred.
 
 ---
 
@@ -105,8 +112,10 @@
 
 Before initiating Phase 1.5 implementation, the project owner should review and approve:
 1. [x] **Brand Identity & Tagline:** `Crafnex / CRAF NEX` — *"BUILD YOUR WORLD. HOST YOUR GAME."*
-2. [x] **Design Palette:** Graphite `#12161C`, Acid Lime `#B8F45A`, Ice Cyan `#4CC9D6`, Warm-Neutral light canvas `#F5F7F9`.
-3. [x] **Sitemap:** Exactly 27 public routes cataloged without contradictions.
-4. [x] **Plans Flow:** Two-page flow (`plans` landing -> `all-plans` grid) with Free Plan separate and Home page uncluttered.
-5. [ ] **Pending Decision (1 GB vs 4 GB Starting Plan):** Confirm whether the entry paid tier (**Struggler**) should start at **1 GB** (owner's launch preference) or remain at **4 GB** (current frontend code baseline in `src/data/plans.ts`) when Phase 1.5 code changes begin.
-6. [ ] **Phase 1.5 Authorization:** Formal approval to commence Phase 1.5 frontend implementation.
+2. [x] **Original Logo System:** Creative C + N combined monogram with standalone icon & full lockup versions.
+3. [x] **Cinematic Media Specifications:** Dedicated loading screen video (with upper-right → left → top → reveal sequence) and separate homepage hero looping video.
+4. [x] **Design Palette:** Graphite `#12161C`, Acid Lime `#B8F45A`, Ice Cyan `#4CC9D6`, Warm-Neutral light canvas `#F5F7F9`.
+5. [x] **Sitemap:** Exactly 27 public routes cataloged without contradictions.
+6. [x] **Plans Flow:** Two-page flow (`plans` landing -> `all-plans` grid) with Free Plan separate and Home page uncluttered.
+7. [ ] **Pending Decision (1 GB vs 4 GB Starting Plan):** Confirm whether the entry paid tier (**Struggler**) should start at **1 GB** (owner's launch preference) or remain at **4 GB** (current frontend code baseline in `src/data/plans.ts`) when Phase 1.5 code changes begin.
+8. [ ] **Phase 1.5 Authorization:** Formal approval to commence Phase 1.5 frontend implementation.

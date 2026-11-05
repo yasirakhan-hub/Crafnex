@@ -4,7 +4,7 @@
 > **Tagline:** BUILD YOUR WORLD. HOST YOUR GAME.  
 > **Brand Descriptor:** Game Server Hosting  
 > **Visual Identity:** Premium, Modern, Cinematic Gaming & Technology Aesthetic  
-> **Status:** Proposed Phase 1 Design Tokens & Guidelines (Documentation Phase)
+> **Status:** Phase 1 Design Specification (Documentation Phase)
 
 ---
 
@@ -13,21 +13,85 @@
 Crafnex establishes an original, premium gaming and infrastructure identity. The visual tone balances the passion of gaming culture with the precision of high-reliability cloud architecture. 
 
 ### Core Design Pillars
-1. **Cinematic & Focused:** Immersive dark surfaces with vivid, functional accents that direct the user's attention to performance metrics and server capabilities.
-2. **Anti-Clutter & Restrained:** Clean spatial structure, clear typographic hierarchy, and generous breathing room. Avoid decorative visual gimmicks, visual slop, or ungrounded rainbow gradients.
-3. **Hardware Transparency:** Data-dense, monospace technical callouts (RAM, vCPU, NVMe, tickrates) paired with human-readable explanations.
-4. **Original Identity (No Resemblance to Competitors):** Crafnex possesses its own unique graphite and acid-lime/ice-cyan palette. It strictly avoids replicating the background treatments, accent palettes, typography, or layout signatures of other brands (such as LordCloud or generic host clones).
-5. **Mobile-First Responsiveness:** Flawless usability across Android mobile screens, tablets, laptops, and ultra-wide desktop monitors.
+1. **Cinematic & Atmospheric:** Immersive dark surfaces, high-fidelity video backgrounds, and deliberate lighting evoking contemporary gaming titles (inspired by the atmospheric depth of *Once Human* and modern gaming reveal experiences).
+2. **Original C + N Brand Mark:** A proprietary, futuristic geometric logo integrating the letters "C" and "N" into a unified monogram.
+3. **Anti-Clutter & Restrained:** Clean spatial structure, clear typographic hierarchy, and generous breathing room. Avoid decorative visual gimmicks, visual slop, or ungrounded rainbow gradients.
+4. **Hardware Transparency:** Data-dense, monospace technical callouts (RAM, vCPU, NVMe, tickrates) paired with human-readable explanations.
+5. **Original Identity (No Resemblance to Competitors):** Crafnex possesses its own unique graphite and acid-lime/ice-cyan palette. It strictly avoids replicating the background treatments, accent palettes, typography, layout signatures, or exact animations of other brands (such as LordCloud or generic host clones).
+6. **Mobile-First Responsiveness:** Flawless usability across Android mobile screens, tablets, laptops, and ultra-wide desktop monitors.
 
 ---
 
-## 2. Proposed Color System & Design Tokens
+## 2. Crafnex Logo System & Brand Mark
 
-The proposed color tokens replace the previous rainbow experiments with an intentional, high-contrast gaming palette.
+The Crafnex logo embodies speed, server nodes, and infinite world-building.
 
-### 2.1 Dark Palette (Primary Gaming Canvas)
-The primary gaming aesthetic employs deep graphite layers with high-energy acid-lime and ice-cyan focal points:
+### 2.1 The Creative C + N Combined Monogram Concept
+- **Concept & Geometry:** 
+  - An interlocking, futuristic geometric monogram fusing the outer curvature of the letter **"C"** (Crafting / Cloud) with the dynamic forward slash and vertical pillars of the letter **"N"** (Nex / Nodes / Network).
+  - The inner apex forms an angular chevron pointing upward-forward, symbolizing low-latency packet routing and gaming progression.
+  - Chamfered vertices and crisp negative-space channels ensure instant recognition at both miniature and cinematic scales.
+- **Standalone Icon Version:**
+  - Compact, high-impact square/circular boundary.
+  - Deployed as: website favicon (16px/32px/48px), PWA app launcher, loading screen focal hero (120px+), and mobile navigation brand mark.
+- **Full Logo Lockup Version:**
+  - Combines the C + N icon on the left with the uppercase, wide-tracked wordmark **`CRAF NEX`** on the right.
+  - Accompanied by the sub-label descriptor *"Game Server Hosting"*.
+  - Deployed across: desktop navigation header, site footer, and future client dashboard.
+- **Design Safeguards:** 
+  - Custom vector construction (SVG).
+  - Designed completely independently of competitor logos (zero copying of LordCloud's cloud emblems or font lockups).
 
+---
+
+## 3. Cinematic Loading Screen & Homepage Hero Video Experiences
+
+To create a memorable first impression, Crafnex incorporates two distinct, purpose-encoded Minecraft cinematic video experiences.
+
+### 3.1 Cinematic Loading Screen (Site Reveal Experience)
+- **Visual Concept:** An atmospheric, full-screen introductory sequence setting a cinematic tone before transitioning smoothly into the application.
+- **Background Media:** 
+  - Uses an **actual Minecraft cinematic VIDEO** as the full-screen backdrop (not a static image).
+  - Captures high-shader atmospheric Minecraft vistas (dramatic lighting, depth-of-field, sweeping camera movement).
+  - **Strict Rule:** Must be a **separate video file** from the homepage hero video.
+- **Focal Branding:**
+  - Displays the creative **C + N combined logo** prominently centered with a subtle, futuristic ambient backlight.
+- **Animation Choreography:**
+  - Inspired by premium cinematic game launch sequences and website reveal experiences (with atmospheric depth inspired by *Once Human*).
+  - **Exact Required Sequence:**
+    1. **Initial Vector:** Motion and glow initiate from the **upper-right** viewport quadrant.
+    2. **Horizontal Sweep:** The energy and focal line sweep smoothly **toward the left** across the screen.
+    3. **Top Transition:** Fluidly glides **across the top** perimeter of the viewport.
+    4. **Hero Reveal:** Gracefully fades and expands to unveil the rendered Homepage without harsh cuts.
+- **No Progress Bar / Counter:**
+  - Strictly **no percentage counter ("0% - 100%")** or traditional progress bars.
+  - The reveal feels organic, immersive, and cinematic rather than synthetic or software-like.
+- **Synchronization & Performance:**
+  - Synchronized with actual DOM and asset readiness.
+  - Features an intentional smooth minimum duration (1.2s – 1.6s) to ensure visual coherence even on ultra-fast network connections.
+  - Encoded in optimized, lightweight WebM and MP4 codecs with zero audio (`muted`, `playsinline`).
+  - Fallback: High-resolution static concept artwork is displayed only if video playback fails or the user has data-saver/reduced-motion enabled.
+
+### 3.2 Homepage Hero Video Background
+- **Visual Concept:** A dedicated, looping background video embedded directly within the Homepage Hero section.
+- **Background Media:**
+  - A **separate Minecraft cinematic VIDEO** featuring vibrant multiplayer world activity, expansive builds, or smooth flythroughs.
+  - Plays continuously in a seamless loop beneath the hero content.
+- **Readability & Contrast Guarantee:**
+  - A calibrated dark graphite gradient vignette (`#12161C` at 65% to 85% opacity) is layered over the video.
+  - Ensures the H1 headline, tagline (*"BUILD YOUR WORLD. HOST YOUR GAME."*), badges, and primary action buttons achieve AAA WCAG contrast.
+- **Mobile & Desktop Optimization:**
+  - Autoplay, muted, loop, and `playsinline` attributes configured for seamless playback on Android handhelds and desktop browsers.
+  - Optimized viewport sizing prevents layout shifts.
+  - Static fallback image provided for low-power or video-unsupported environments.
+
+---
+
+## 4. Proposed Color System & Design Tokens
+
+The Crafnex color palette is preserved with zero rainbow elements, utilizing high-contrast graphite surfaces and vivid technological accents.
+
+### 4.1 Dark Palette (Primary Gaming Canvas)
 | Token Name | Hex Value | Role & Architectural Usage |
 | :--- | :--- | :--- |
 | **Graphite Background** | `#12161C` | Deep base canvas for main viewport and body backdrop. |
@@ -43,9 +107,7 @@ The primary gaming aesthetic employs deep graphite layers with high-energy acid-
 | **Secondary Text** | `#A7B1BC` | Descriptive body copy, spec labels, navigation links. |
 | **Muted Text** | `#6C7885` | Footnotes, demo disclaimers, timestamps, copyright copy. |
 
-### 2.2 Light Palette (Warm-Neutral Slate Canvas)
-The light theme utilizes a clean, warm-neutral foundation providing optimal daylight readability without sacrificing brand identity:
-
+### 4.2 Light Palette (Warm-Neutral Slate Canvas)
 | Token Name | Hex Value | Role & Architectural Usage |
 | :--- | :--- | :--- |
 | **Warm-Neutral Background** | `#F5F7F9` | Clean, glare-free light base canvas. |
@@ -61,27 +123,21 @@ The light theme utilizes a clean, warm-neutral foundation providing optimal dayl
 | **Secondary Text** | `#455160` | Slate-grey body paragraphs and spec values. |
 | **Muted Text** | `#758392` | Subdued disclaimers and secondary timestamps. |
 
-### 2.3 Status & Diagnostic Semantic Tokens
-- **Simulated Optimal Ping (< 40 ms):** `#B8F45A` (Acid Lime) or `#10B981` (Emerald) with soft status pulse.
-- **Simulated Moderate Ping (40–90 ms):** `#F2A65A` (Warm Amber).
-- **Simulated High Ping (> 90 ms):** `#EF4444` (Rose/Red).
-- **Popular Tier Spotlight:** `#B8F45A` (Acid Lime) accent ring applied to the **Survivor** plan card.
-
 ---
 
-## 3. Dual-Theme Functional Specification
+## 5. Dual-Theme Functional Specification
 
-Both Dark Mode and Light Mode must provide 100% parity across all 27 pages:
+Both Dark Mode and Light Mode maintain 100% parity across all 27 pages:
 1. **Immediate Class Synchronization:** Toggling theme immediately updates `document.documentElement.classList`.
 2. **Persistent Storage:** Theme preference persists in `localStorage` under `crafnex-theme` to eliminate theme flickering upon page reloads.
-3. **Universal Component Mapping:** Every component, button, modal, card, dropdown, and input field must have explicit light and dark styling variants.
+3. **Universal Component Mapping:** Every component, button, modal, card, dropdown, and input field maps explicitly to active theme variants.
 4. **Navigation Invariance:** Moving between any of the 27 routes preserves the selected theme.
 
 ---
 
-## 4. Typography Hierarchy & Rules
+## 6. Typography Hierarchy & Rules
 
-- **Display & Heading Font:** Geometric sans-serif (`Inter`, `system-ui`, `-apple-system`, `sans-serif`) with bold weights (700, 800) and tight tracking (`-0.025em`) for modern impact.
+- **Display & Heading Font:** Geometric sans-serif (`Inter`, `system-ui`, `-apple-system`, `sans-serif`) with bold weights (700, 800) and tight tracking (`-0.025em`).
 - **Monospace Technical Font:** High-legibility code font (`JetBrains Mono`, `ui-monospace`, `monospace`) used exclusively for technical metrics (`8 GB DDR5 ECC`, `25565`, `20.0 TPS`, `15 ms`).
 - **Typographic Scale:**
   - `Hero Headline (H1)`: 40px – 56px (Desktop), 32px – 40px (Mobile), font-weight 800.
@@ -90,30 +146,3 @@ Both Dark Mode and Light Mode must provide 100% parity across all 27 pages:
   - `Body Copy`: 15px – 16px, line-height 1.6, font-weight 400.
   - `Technical Callouts`: 12px – 14px monospace, font-weight 600.
   - `Badges & Microcopy`: 10px – 12px, font-weight 700, uppercase letter spacing (`+0.05em`).
-
----
-
-## 5. Component Design Standards
-
-### 5.1 Hosting Plan Cards
-- **Uniform Hierarchy:** 
-  1. Card Header: Plan name, audience tagline, and status badge (`Budget Demo`, `Most Popular`, `Performance Demo`, `Extreme Demo`).
-  2. Pricing Section: Prominent display of the placeholder token `[Price TBA]` accompanied by the explicit disclaimer: *"Pricing undecided (Owner to decide later)"*.
-  3. Spec Matrix: Distinct row badges for RAM, CPU cores, NVMe storage, and player slot capacity.
-  4. Feature List: Clean checkmark items detailing backup retention, port allocation, and modpack support.
-  5. Action Button: High-visibility button triggering the Mock Checkout Modal.
-- **Plan Separation:** 
-  - **Free Plan:** Renders within its own separate community section.
-  - **Paid Plans:** Renders the 4 launch tiers (**Struggler**, **Survivor**, **Warrior**, **Champion**) in approved sequence on the dedicated All Plans page (`all-plans`).
-  - **Home Page:** No duplicate paid plan cards.
-
-### 5.2 Interactive Calculators & Simulators
-- **RAM Calculator:** Interactive player and mod intensity sliders dynamically updating recommended RAM and highlighting the corresponding recommended plan.
-- **Simulated Ping Tester:** Displays planned node cities (Mumbai, Delhi, Singapore, Frankfurt) with simulated latency averages, labeled prominently with a **"Simulated Diagnostic"** badge.
-- **Mock Checkout Dialog:** Accessible modal presenting selected tier summary, currency toggle, billing term, and a simulated confirmation button triggering local toast feedback.
-- **Interactive Panel Simulator:** Terminal-style console displaying simulated boot logs, player connection events, and mock command inputs (`/tps`, `/help`, `/status`).
-
-### 5.3 Mobile Navigation Drawer
-- Hamburger navigation button seamlessly toggles into a centered X close icon.
-- Drawer provides categorized links to all 27 pages, plus quick currency (`₹ INR` / `$ USD`) and theme switches.
-- Full viewport height compliance with smooth touch scrolling and tap dismissal.
