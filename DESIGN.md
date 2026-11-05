@@ -1,108 +1,119 @@
-# Design System & Visual Identity: Crafnex
+# Design System & Visual Identity: Crafnex (CRAF NEX)
 
-## 1. Brand Identity & Visual Direction
-**Crafnex** blends modern gaming culture with a clean, high-performance tech aesthetic. The brand language avoids excessive visual noise, focusing on readable typography, deliberate spacing, and a vibrant **signature rainbow wordmark** that sets Crafnex apart from standard hosting providers.
-
-*Note: Visual inspirations from platforms like WammuHost and HexaCraft are applied exclusively at the level of layout structure, clean card spacing, and transparent technical spec sheets. Crafnex does not replicate proprietary logos, copy, or brand assets.*
-
----
-
-## 2. Signature Rainbow Brand System
-
-### 2.1 The Rainbow Gradient Formula
-The signature rainbow gradient is applied to the Crafnex wordmark, featured card highlights, and primary call-to-action buttons:
-```css
-/* Signature Crafnex Spectrum */
-background: linear-gradient(
-  135deg,
-  #FF4D4D 0%,    /* Crimson */
-  #FF8A00 20%,   /* Amber */
-  #FFD600 40%,   /* Gold */
-  #00E575 60%,   /* Emerald */
-  #00A3FF 80%,   /* Cyan */
-  #8B5CF6 100%   /* Violet */
-);
-```
-
-### 2.2 Typographic Application
-```css
-.crafnex-rainbow-text {
-  background: linear-gradient(135deg, #FF4D4D, #FF8A00, #FFD600, #00E575, #00A3FF, #8B5CF6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-```
+> **Brand:** Crafnex / CRAF NEX  
+> **Tagline:** BUILD YOUR WORLD. HOST YOUR GAME.  
+> **Brand Descriptor:** Game Server Hosting  
+> **Visual Identity:** Premium, Modern, Cinematic Gaming & Technology Aesthetic  
+> **Status:** Proposed Phase 1 Design Tokens & Guidelines (Documentation Phase)
 
 ---
 
-## 3. Dual Theme Specifications & Color Tokens
+## 1. Visual Direction & Identity Principles
 
-### 3.1 Theme Functionality Requirements
-The design system mandates strict functional parity between Dark Mode and Light Mode:
-- **Universal Application:** Dark Mode and Light Mode must apply completely across every page, view, and component without exception.
-- **Toggle Responsiveness:** The theme switcher must immediately toggle active classes upon click on both mobile navigation drawers and desktop headers.
-- **Navigation Consistency:** Navigating between any of the 12 pages must preserve the selected theme without resetting or flickering.
-- **Persistent State:** The chosen theme must persist in browser storage (`localStorage`) so that page refreshes or returning sessions stay in the user's chosen theme.
-- **Component Compliance:** All cards, navigation bars, headers, footers, buttons, inputs, dropdowns, and text elements must explicitly map to their corresponding theme tokens. No component or page may remain stuck in an unintended theme.
+Crafnex establishes an original, premium gaming and infrastructure identity. The visual tone balances the passion of gaming culture with the precision of high-reliability cloud architecture. 
 
-### 3.2 Dark Mode (Primary Gaming Palette)
-| Token | Hex Value | Usage |
+### Core Design Pillars
+1. **Cinematic & Focused:** Immersive dark surfaces with vivid, functional accents that direct the user's attention to performance metrics and server capabilities.
+2. **Anti-Clutter & Restrained:** Clean spatial structure, clear typographic hierarchy, and generous breathing room. Avoid decorative visual gimmicks, visual slop, or ungrounded rainbow gradients.
+3. **Hardware Transparency:** Data-dense, monospace technical callouts (RAM, vCPU, NVMe, tickrates) paired with human-readable explanations.
+4. **Original Identity (No Resemblance to Competitors):** Crafnex possesses its own unique graphite and acid-lime/ice-cyan palette. It strictly avoids replicating the background treatments, accent palettes, typography, or layout signatures of other brands (such as LordCloud or generic host clones).
+5. **Mobile-First Responsiveness:** Flawless usability across Android mobile screens, tablets, laptops, and ultra-wide desktop monitors.
+
+---
+
+## 2. Proposed Color System & Design Tokens
+
+The proposed color tokens replace the previous rainbow experiments with an intentional, high-contrast gaming palette.
+
+### 2.1 Dark Palette (Primary Gaming Canvas)
+The primary gaming aesthetic employs deep graphite layers with high-energy acid-lime and ice-cyan focal points:
+
+| Token Name | Hex Value | Role & Architectural Usage |
 | :--- | :--- | :--- |
-| **Background Base** | `#090D16` | Main deep obsidian background canvas. |
-| **Surface Card** | `#0F172A` | Elevated container cards with 70% opacity backdrop blur. |
-| **Surface Hover** | `#1E293B` | Interactive hover states, active tabs, code containers. |
-| **Border Subtle** | `rgba(255, 255, 255, 0.08)` | Default container borders and dividers. |
-| **Border Active** | `rgba(0, 163, 255, 0.40)` | Active inputs and selected plan highlights. |
-| **Text Primary** | `#F8FAFC` | Main headings and high-contrast labels. |
-| **Text Secondary**| `#94A3B8` | Body paragraphs, hardware descriptions, navigation links. |
-| **Text Muted** | `#64748B` | Footnotes, demo disclaimers, timestamps. |
+| **Graphite Background** | `#12161C` | Deep base canvas for main viewport and body backdrop. |
+| **Elevated Surface** | `#1B222B` | Elevated panels, sticky navigation bar, slide-out drawers, modal containers. |
+| **Card Surface** | `#222B35` | Interactive plan cards, feature containers, calculator panels, software cards. |
+| **Surface Hover** | `#2C3744` | Hover states, active tab backgrounds, interactive button states. |
+| **Border Subtle** | `rgba(244, 247, 242, 0.08)` | Container outlines, subtle card borders, card dividers. |
+| **Border Active / Focus** | `rgba(184, 244, 90, 0.40)` | Active inputs, focused elements, highlighted card outlines. |
+| **Primary Accent (Acid Lime)** | `#B8F45A` | Primary brand accent: CTA buttons, primary highlights, active badges, key icons. |
+| **Secondary Accent (Ice Cyan)**| `#4CC9D6` | Secondary accent: telemetry badges, network indicators, Bedrock highlights. |
+| **Optional Highlight (Warm Amber)**| `#F2A65A` | Warning states, high-load indicators, special announcement pills. |
+| **Primary Text** | `#F4F7F2` | Headings, high-contrast card titles, primary readouts. |
+| **Secondary Text** | `#A7B1BC` | Descriptive body copy, spec labels, navigation links. |
+| **Muted Text** | `#6C7885` | Footnotes, demo disclaimers, timestamps, copyright copy. |
 
-### 3.3 Light Mode (Clean Slate Palette)
-| Token | Hex Value | Usage |
+### 2.2 Light Palette (Warm-Neutral Slate Canvas)
+The light theme utilizes a clean, warm-neutral foundation providing optimal daylight readability without sacrificing brand identity:
+
+| Token Name | Hex Value | Role & Architectural Usage |
 | :--- | :--- | :--- |
-| **Background Base** | `#F8FAFC` | Crisp off-white background canvas. |
-| **Surface Card** | `#FFFFFF` | Solid white cards with soft drop shadows. |
-| **Surface Hover** | `#F1F5F9` | Hover states, tab pills, inactive controls. |
-| **Border Subtle** | `#E2E8F0` | Structural dividers and input borders. |
-| **Border Active** | `#3B82F6` | Active input outlines and selected cards. |
-| **Text Primary** | `#0F172A` | Deep charcoal for readability. |
-| **Text Secondary**| `#475569` | Mid-slate body text. |
-| **Text Muted** | `#94A3B8` | Muted captions and disclaimers. |
+| **Warm-Neutral Background** | `#F5F7F9` | Clean, glare-free light base canvas. |
+| **Elevated Surface** | `#FFFFFF` | Solid white headers, footers, elevated drawers, and modal backdrops. |
+| **Card Surface** | `#FFFFFF` | Clean white card containers with soft, refined elevation shadows. |
+| **Surface Hover** | `#EBEFF4` | Interactive hover states, inactive tab pills, subtle code blocks. |
+| **Border Subtle** | `#DDE3EA` | Structural card dividers, table borders, input outlines. |
+| **Border Active / Focus** | `#65A30D` / `#0284C7` | High-contrast focus rings and active card borders. |
+| **Primary Accent (Deep Lime)**| `#5D9908` | Contrast-adjusted lime for buttons, key badges, and actionable elements. |
+| **Secondary Accent (Deep Cyan)**| `#0E8494` | Contrast-adjusted cyan for network chips and secondary links. |
+| **Highlight Accent (Deep Amber)**| `#C26710` | High-contrast amber for alerts and attention pills. |
+| **Primary Text** | `#12161C` | Crisp, dark graphite for headings and primary titles. |
+| **Secondary Text** | `#455160` | Slate-grey body paragraphs and spec values. |
+| **Muted Text** | `#758392` | Subdued disclaimers and secondary timestamps. |
 
-### 3.4 Semantic Indicator Colors
-- **Simulated Low Ping (< 40ms) / Online Goal:** `#10B981` (Emerald) with soft status dot.
-- **Simulated Moderate Ping (40–90ms):** `#F59E0B` (Amber).
-- **Simulated High Ping (> 90ms):** `#EF4444` (Rose).
-- **Popular Tier Accent:** `#8B5CF6` (Violet) used for the **Survivor** plan spotlight badge.
+### 2.3 Status & Diagnostic Semantic Tokens
+- **Simulated Optimal Ping (< 40 ms):** `#B8F45A` (Acid Lime) or `#10B981` (Emerald) with soft status pulse.
+- **Simulated Moderate Ping (40–90 ms):** `#F2A65A` (Warm Amber).
+- **Simulated High Ping (> 90 ms):** `#EF4444` (Rose/Red).
+- **Popular Tier Spotlight:** `#B8F45A` (Acid Lime) accent ring applied to the **Survivor** plan card.
 
 ---
 
-## 4. Typography Hierarchy
-- **Primary Type Family:** Modern geometric sans-serif (`Inter`, `system-ui`).
-- **Monospace Type Family:** `JetBrains Mono` / `ui-monospace` for numerical and technical readouts (e.g., `8 GB DDR5`, simulated ping `24ms`, port `25565`).
-- **Scale:**
-  - `Display / Hero Title`: 44px – 60px, font-weight 800, tracking-tight.
+## 3. Dual-Theme Functional Specification
+
+Both Dark Mode and Light Mode must provide 100% parity across all 27 pages:
+1. **Immediate Class Synchronization:** Toggling theme immediately updates `document.documentElement.classList`.
+2. **Persistent Storage:** Theme preference persists in `localStorage` under `crafnex-theme` to eliminate theme flickering upon page reloads.
+3. **Universal Component Mapping:** Every component, button, modal, card, dropdown, and input field must have explicit light and dark styling variants.
+4. **Navigation Invariance:** Moving between any of the 27 routes preserves the selected theme.
+
+---
+
+## 4. Typography Hierarchy & Rules
+
+- **Display & Heading Font:** Geometric sans-serif (`Inter`, `system-ui`, `-apple-system`, `sans-serif`) with bold weights (700, 800) and tight tracking (`-0.025em`) for modern impact.
+- **Monospace Technical Font:** High-legibility code font (`JetBrains Mono`, `ui-monospace`, `monospace`) used exclusively for technical metrics (`8 GB DDR5 ECC`, `25565`, `20.0 TPS`, `15 ms`).
+- **Typographic Scale:**
+  - `Hero Headline (H1)`: 40px – 56px (Desktop), 32px – 40px (Mobile), font-weight 800.
   - `Section Heading (H2)`: 28px – 36px, font-weight 700.
   - `Card Title (H3)`: 18px – 22px, font-weight 600.
   - `Body Copy`: 15px – 16px, line-height 1.6, font-weight 400.
-  - `Badges & Captions`: 12px – 13px, font-weight 600, uppercase letter spacing for status pills.
+  - `Technical Callouts`: 12px – 14px monospace, font-weight 600.
+  - `Badges & Microcopy`: 10px – 12px, font-weight 700, uppercase letter spacing (`+0.05em`).
 
 ---
 
 ## 5. Component Design Standards
 
-### 5.1 Plan Cards (5 Launch Tiers)
-- The launch plans consist of the **Free Tier** in its own distinct community section, followed by the four paid tiers: **Struggler**, **Survivor**, **Warrior**, and **Champion**.
-- Uniform card anatomy: Header (Plan Name & Badge), Pricing Area (displaying undecided placeholder `[Price TBA]`), Core Specs (RAM, CPU, Storage, Slots), Feature Checklist, and Action Button.
-- The **Survivor Plan** carries a subtle rainbow border glow indicating its status as the most popular proposed community tier.
-- Every card includes a subtle demo disclaimer note ("Proposed demo configuration; pricing to be announced").
+### 5.1 Hosting Plan Cards
+- **Uniform Hierarchy:** 
+  1. Card Header: Plan name, audience tagline, and status badge (`Budget Demo`, `Most Popular`, `Performance Demo`, `Extreme Demo`).
+  2. Pricing Section: Prominent display of the placeholder token `[Price TBA]` accompanied by the explicit disclaimer: *"Pricing undecided (Owner to decide later)"*.
+  3. Spec Matrix: Distinct row badges for RAM, CPU cores, NVMe storage, and player slot capacity.
+  4. Feature List: Clean checkmark items detailing backup retention, port allocation, and modpack support.
+  5. Action Button: High-visibility button triggering the Mock Checkout Modal.
+- **Plan Separation:** 
+  - **Free Plan:** Renders within its own separate community section.
+  - **Paid Plans:** Renders the 4 launch tiers (**Struggler**, **Survivor**, **Warrior**, **Champion**) in approved sequence on the dedicated All Plans page (`all-plans`).
+  - **Home Page:** No duplicate paid plan cards.
 
-### 5.2 Interactive Elements
-- **Simulated Ping Widget:** Card displaying city name, flag, node status ("Planned"), simulated latency indicator with colored status pill, and a prominent "Simulated" badge.
-- **RAM Calculator:** Responsive slider with immediate numerical updates and a dynamic recommendation card linking to the matching plan from the 5 tiers.
-- **Mock Checkout Modal:** Clean dialog displaying selected plan summary, billing cycle, pricing placeholder `[Price TBA]`, and a mock confirm button that triggers a demo toast.
-- **Demo Forms:** Inputs with clear floating labels, validation styling, and clear tooltips noting that no data is saved to a server.
+### 5.2 Interactive Calculators & Simulators
+- **RAM Calculator:** Interactive player and mod intensity sliders dynamically updating recommended RAM and highlighting the corresponding recommended plan.
+- **Simulated Ping Tester:** Displays planned node cities (Mumbai, Delhi, Singapore, Frankfurt) with simulated latency averages, labeled prominently with a **"Simulated Diagnostic"** badge.
+- **Mock Checkout Dialog:** Accessible modal presenting selected tier summary, currency toggle, billing term, and a simulated confirmation button triggering local toast feedback.
+- **Interactive Panel Simulator:** Terminal-style console displaying simulated boot logs, player connection events, and mock command inputs (`/tps`, `/help`, `/status`).
 
-### 5.3 Mobile & Responsive Behavior
-- **Breakpoints:** Small (`< 640px`), Medium (`640px - 1024px`), Desktop (`> 1024px`).
-- **Navigation:** Header collapses into a smooth slide-out drawer on mobile screens with quick access to all 12 pages, currency switcher, and theme toggle.
+### 5.3 Mobile Navigation Drawer
+- Hamburger navigation button seamlessly toggles into a centered X close icon.
+- Drawer provides categorized links to all 27 pages, plus quick currency (`₹ INR` / `$ USD`) and theme switches.
+- Full viewport height compliance with smooth touch scrolling and tap dismissal.
