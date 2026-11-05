@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .crafnex-rainbow-text {
+    background: linear-gradient(135deg, #FF4D4D 0%, #FF8A00 20%, #FFD600 40%, #00E575 60%, #00A3FF 80%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .crafnex-rainbow-bg {
+    background: linear-gradient(135deg, #FF4D4D 0%, #FF8A00 20%, #FFD600 40%, #00E575 60%, #00A3FF 80%, #8B5CF6 100%);
+  }
+
+  .crafnex-rainbow-border {
+    position: relative;
+  }
+
+  .crafnex-rainbow-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, #FF4D4D 0%, #FF8A00 20%, #FFD600 40%, #00E575 60%, #00A3FF 80%, #8B5CF6 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  color-scheme: light;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}

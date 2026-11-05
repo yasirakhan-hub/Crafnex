@@ -1,0 +1,6 @@
+{
+  "name": "Crafnex",
+  "description": "High-performance game server hosting starting with Minecraft Java and Bedrock, India-first low-latency nodes, and scalable game infrastructure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
