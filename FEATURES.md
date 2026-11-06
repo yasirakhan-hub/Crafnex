@@ -30,8 +30,8 @@
   - **Cinematic Choreography:** Inspired by high-end gaming reveal experiences and *Once Human*'s cinematic atmosphere.
     - *Sequence:* Initiates from the **upper-right** → moves smoothly **toward the left** → sweeps **across the top** of the screen → smoothly reveals the rendered homepage.
   - **No Numerical Counter / Progress Bar:** Operates without synthetic percentage displays ("0% - 100%") or progress bars.
-  - **Readiness Synchronization:** Synchronized to actual DOM and asset readiness with an intentional minimum duration (1.2s - 1.6s) to guarantee smooth visual payoff.
-  - **Muted & Resilient Playback:** Muted autoplay (`muted`, `playsinline`) with graceful static image fallback only if video decoding fails or battery-saver restricts playback.
+  - **Readiness Synchronization:** Synchronized with actual website readiness. Never reveals the homepage before critical content is ready, and never adds artificial waiting just for animation.
+  - **Muted & Resilient Playback:** Muted autoplay (`muted`, `playsinline`). A static image fallback is permitted only when the loading video genuinely fails to load or play; data-saver or reduced-motion settings must not silently replace the normal video experience with an image. Reduced-motion preferences are respected by simplifying animation where necessary.
 - **Homepage Hero Cinematic Video Background:**
   - Plays a separate, looping Minecraft cinematic video background directly within the Hero section.
   - Contrast-calibrated dark gradient vignette (`#12161C` at 65%–85% opacity) ensuring the headline, tagline (*"BUILD YOUR WORLD. HOST YOUR GAME."*), and CTA buttons remain effortlessly legible (AAA contrast).

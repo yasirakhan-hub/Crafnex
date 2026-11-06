@@ -67,10 +67,9 @@ To create a memorable first impression, Crafnex incorporates two distinct, purpo
   - Strictly **no percentage counter ("0% - 100%")** or traditional progress bars.
   - The reveal feels organic, immersive, and cinematic rather than synthetic or software-like.
 - **Synchronization & Performance:**
-  - Synchronized with actual DOM and asset readiness.
-  - Features an intentional smooth minimum duration (1.2s – 1.6s) to ensure visual coherence even on ultra-fast network connections.
+  - Synchronized with actual website readiness: never reveal the homepage before critical content is ready, and never add artificial waiting just for animation.
   - Encoded in optimized, lightweight WebM and MP4 codecs with zero audio (`muted`, `playsinline`).
-  - Fallback: High-resolution static concept artwork is displayed only if video playback fails or the user has data-saver/reduced-motion enabled.
+  - Fallback: A static image fallback is permitted only when the loading video genuinely fails to load or play. Data-saver or reduced-motion settings must not silently replace the normal video experience with an image; reduced-motion preferences are respected by simplifying animation where necessary.
 
 ### 3.2 Homepage Hero Video Background
 - **Visual Concept:** A dedicated, looping background video embedded directly within the Homepage Hero section.

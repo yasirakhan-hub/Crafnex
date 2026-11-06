@@ -131,17 +131,17 @@ The application decouples the introductory loading reveal from the persistent ho
 ### 4.2 Cinematic Loading Sequence Architecture
 - **Component:** `CinematicLoadingScreen.tsx`.
 - **Lifecycle & Readiness Logic:**
-  - Manages internal state: `isReady` (tied to window load and critical font hydration) and `animationComplete`.
-  - Enforces a minimum visual dwell of ~1.4 seconds and a maximum safety timeout (3.5 seconds) ensuring visitors on slow connections never experience a frozen state.
+  - Manages internal state: `isReady` (strictly tied to window load, critical fonts, and primary asset readiness) and `animationComplete`.
+  - The loading screen strictly synchronizes with actual website readiness: never reveal the homepage before critical content is ready, and never add artificial waiting just for animation.
   - **Animation Choreography:**
     1. *Origin:* Upper-right coordinate `(x: '100%', y: '-20%')`.
     2. *Sweep:* Sweeps toward the left `(x: '-10%')` with a soft luminous aura.
     3. *Top Transition:* Glides across the top perimeter `(y: '-5%')`.
     4. *Reveal:* Smooth opacity wipe exposing the Homepage.
   - **Zero Progress Bar / Counters:** No percentage text or loading bars.
-- **Resilience:**
+- **Resilience & Fallback Architecture:**
   - Standard `<video autoPlay muted playsInline>` with `<source type="video/webm">` and `<source type="video/mp4">`.
-  - Fallback: High-resolution static concept artwork (`loading-poster.webp`) rendered immediately if video playback is blocked by low-power modes or browser policies.
+  - Fallback: A static image fallback (`loading-poster.webp`) is permitted only when the loading video genuinely fails to load or play (e.g. network error, unsupported media format). Data-saver or reduced-motion settings must not silently replace the normal video experience with an image; reduced-motion preferences are respected by simplifying or smoothing animation transitions while preserving video playback.
 
 ### 4.3 Hero Video Readability Architecture
 - **Contrast Scrim:** Positioned absolutely over the video container with `background: linear-gradient(180deg, rgba(18,22,28,0.70) 0%, rgba(18,22,28,0.85) 100%)`.

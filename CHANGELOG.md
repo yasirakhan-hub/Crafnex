@@ -4,6 +4,17 @@ All notable documentation and architectural updates are recorded in this file.
 
 ---
 
+## [Phase 1.1.1] - 2026-11-05 — Loading Readiness Synchronization & Fallback Rule Refinement
+
+### Summary
+Applied owner corrections to the loading screen specifications across `DESIGN.md`, `FEATURES.md`, and `ARCHITECTURE.md`.
+
+### Changed
+- **Removed Artificial Wait Duration:** Removed the mandatory 1.2–1.6s minimum loading duration. The loading screen now strictly synchronizes with actual website readiness: the homepage is never revealed before critical content is ready, and artificial waiting just for animation is strictly prohibited.
+- **Clarified Video Fallback Rules:** Clarified that a static image fallback is permitted only when the loading video genuinely fails to load or play. Data-saver and reduced-motion settings must not silently replace the video experience with an image; reduced-motion preferences are respected by simplifying or smoothing animation transitions while preserving video playback.
+
+---
+
 ## [Phase 1.1.0] - 2026-11-05 — Brand Logo System & Cinematic Media Blueprint
 
 ### Summary
